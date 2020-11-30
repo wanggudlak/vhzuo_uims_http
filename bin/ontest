@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ssh root@47.105.121.22 > ./storage/logs/ontest.log 2>&1 << eeooff
+su www-data
+cd /home/wwwroot/uims-test.viidesk.com/uims-server
+git pull
+make build
+sudo supervisorctl reread
+sudo supervisorctl restart uims-http-server1
+sudo supervisorctl restart uims-rpc-server1
+echo success online!
+exit
+exit
+eeooff
+echo done!

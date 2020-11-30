@@ -1,0 +1,16 @@
+# 目录
+
+* [前言](README.md)
+* [0、说明](index.md)
+* [1、客户端基本信息保存](client_basic_save.md)
+* [2、客户端入驻授权与禁止](client_basic_forbidden.md)
+* [3、列出已入驻的客户端及其详情](client_management.md)
+* [4、客户端设置信息保存](client_setting_save.md)
+* [5、客户端设置信息删除](client_setting_delete.md)
+* [6、用户注册登录/客户端用户操作接口](client_auth.md)
+* [7、资源点](resources_management.md)
+* [8、资源组](resources_group_management.md)
+* [9、角色组](role_management.md)
+* [10、角色资源组](role_group_management.md)
+* [11、文件上传](upload_file.md)
+* [12、客户端与UIMS之间的RSA通信规则](client_rsa_communicate.md)

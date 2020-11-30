@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "输入你要kill的端口号：" a
+
+echo '你将要kill的进程：';
+echo "`lsof -i:$a`";
+
+for i in `lsof -i:$a | awk '{print $2}' | grep -v 'PID'`;
+do
+    kill -9 $i;
+done
