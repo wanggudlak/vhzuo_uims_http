@@ -114,35 +114,6 @@ make mac-in-win64
 make linux-in-win64
 ```
 
-### Thrift RPC 
-- UIMS通过Thrift提供RPC接口调用，pkg/thrift/client  pkg/thrift/server 为uims系统提供的客户端和服务端，client_test.go中TestInvoke作为使用client远程调用uims rpc server的单元测试，同时也提供了使用client的方法
-- UIMS开启rpc服务端的方法：
-```
-make
-./uims thrift-rpc:server
-```
-- 运行client单元测试
-```
-cd <项目跟目录>/pkg/thrift/client
-go test -run=Invoke 
-```
-- 传参说明
-- uims系统与各客户端系统约定按如下格式传参：
-- 请求参数包封装成json格式，有两个基本的参数域：method_name  params 
-```json
-{
-  "method_name": "getUserInfo",
-  "params": "字典或者json编码后的字符串"
-}
-```
-- PHP客户端使用示例详见结算系统cass-uims-rpc分支，单元测试 
-``` ./vendor/bin/phpunit tests/Unit/MicoServiceAPI/EsignTest.php --filter=testGetResultByInvokeMethodViaSwoole```
-
-- Python客户端使用示例
-```
-python 客户端使用相见 vzhuoserver/gen-py中client文件里的rpc_invoke方法
-```
-
 ### 功能
 
 - [x] 连接`MySQL`数据库

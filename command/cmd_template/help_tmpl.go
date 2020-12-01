@@ -9,7 +9,6 @@ import (
 	_ "uims/command/commands/migrate_data"
 	_ "uims/command/commands/migrator"
 	_ "uims/command/commands/server"
-	_ "uims/command/commands/thrift_RPC_server"
 	_ "uims/command/commands/version"
 	"uims/pkg/tool"
 )

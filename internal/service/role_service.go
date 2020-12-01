@@ -204,7 +204,6 @@ func (RoleService) DeleteRole(id int) error {
 
 //请求更新子业务系统用户角色数据
 func requestUpdateClientRole(tx *gorm.DB, roleID int, method string, deleteResGroupIDs []int, oldRoleInfo model.Role) error {
-
 	type clientRole struct {
 		OldRoleNameCN     string   `json:"old_role_name_cn"`
 		OldRoleNameEN     string   `json:"old_role_name_en"`

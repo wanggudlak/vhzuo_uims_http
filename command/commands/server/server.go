@@ -24,7 +24,7 @@ var CMDuimsServer = &command.Command{
 server 子命令会创建一个UIMS HTTP API服务应用程序。
 `,
 	PreRun: func(cmd *command.Command, args []string) { version.ShowShortVersionBanner() },
-	Run:    createUIMSapiServer,
+	Run:    createUIMSAPIServer,
 }
 
 var (
@@ -40,8 +40,8 @@ func init() {
 	command.CMD.Register(CMDuimsServer)
 }
 
-// createUIMSapiServer 创建一个 UIMS API 服务器
-func createUIMSapiServer(cmd *command.Command, args []string) int {
+// createUIMSAPIServer 创建一个 UIMS API 服务器
+func createUIMSAPIServer(cmd *command.Command, args []string) int {
 	var err error
 	if len(args) > 0 {
 		err = cmd.Flag.Parse(args[1:])

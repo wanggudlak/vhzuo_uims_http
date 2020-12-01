@@ -134,5 +134,5 @@ func (ThriftClientServer) Invoke(req Request, resp *Response, clientId int) erro
 		}
 	}
 
-	return errors.New(req.MethodName + " data synchronization failed")
+	return errors.New(req.MethodName + " data synchronization failed: " + resp.Msg)
 }

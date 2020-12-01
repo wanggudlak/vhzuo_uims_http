@@ -159,7 +159,7 @@ var (
 	ThriftClients = map[string]thriftclient.Config{
 		"cass": {
 			OnOff:                  env.DefaultGetBool("THRIFT_CLIENT_ON_OFF_CASS", true),
-			ServerAddr:             env.DefaultGet("THRIFT_CLIENT_SERVER_ADDR_CASS", "127.0.0.1:9091").(string),
+			ServerAddr:             env.DefaultGet("THRIFT_CLIENT_SERVER_ADDR_CASS", "0.0.0.0:9091").(string),
 			DataProtocol:           env.DefGetStr("THRIFT_CLIENT_PROTOCOL_CASS", "binary"),
 			BufferedSize:           env.DefaultGetInt("THRIFT_CLIENT_BUFFERED_SIZE_CASS", 8192),
 			Buffered:               env.DefaultGetBool("THRIFT_CLIENT_BUFFERED_CASS", false),
@@ -173,7 +173,7 @@ var (
 		},
 		"mp": {
 			OnOff:                  env.DefaultGetBool("THRIFT_CLIENT_ON_OFF_MP", true),
-			ServerAddr:             env.DefaultGet("THRIFT_CLIENT_SERVER_ADDR_MP", "127.0.0.1:9091").(string),
+			ServerAddr:             env.DefaultGet("THRIFT_CLIENT_SERVER_ADDR_MP", "0.0.0.0:9091").(string),
 			DataProtocol:           env.DefGetStr("THRIFT_CLIENT_PROTOCOL_MP", "binary"),
 			BufferedSize:           env.DefaultGetInt("THRIFT_CLIENT_BUFFERED_SIZE_MP", 8192),
 			Buffered:               env.DefaultGetBool("THRIFT_CLIENT_BUFFERED_MP", false),

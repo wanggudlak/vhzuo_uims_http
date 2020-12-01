@@ -172,8 +172,8 @@ func UpdateRole(c *gin.Context) {
 
 	maps["updated_at"] = time.Now().Format("2006-01-02 15:04:05")
 
-	if service.GetRoleService().UpdateRole(request.ID, maps) != nil {
-		responses2.Failed(c, "add role fail", nil)
+	if err := service.GetRoleService().UpdateRole(request.ID, maps); err != nil {
+		responses2.Failed(c, "add role fail: "+err.Error(), nil)
 		return
 	}
 
